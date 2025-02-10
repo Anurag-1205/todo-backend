@@ -12,9 +12,8 @@ const corsOptions = {
     allowedHeaders: ['Content-Type', 'Authorization'] // Allow only these headers
 };
 
-
-app.use(bodyParser.json());
 app.use(cors(corsOptions));
+app.use(bodyParser.json());
 
    
 app.post("/todos", (req, res) => {
