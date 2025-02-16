@@ -7,7 +7,7 @@ const app = express();
 const cors = require("cors");
 
 const corsOptions = {
-    origin: 'https://todo-frontend-brown-ten.vercel.app/', // Allow only requests from this origin
+    origin: 'https://todo-frontend-brown-ten.vercel.app', // Allow only requests from this origin
     methods: 'GET,POST,DELETE,PUT', // Allow only these methods
     allowedHeaders: ['Content-Type', 'Authorization'] // Allow only these headers
 };
