@@ -2,7 +2,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require("path")
-const port = 3000;
 const app = express();
 const cors = require("cors");
 
@@ -12,7 +11,7 @@ const corsOptions = {
     allowedHeaders: ['Content-Type', 'Authorization'] // Allow only these headers
 };
 
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(bodyParser.json());
 
    
@@ -93,7 +92,4 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 })
 
-function startServer(){
-  console.log(`Server in running on port: ${port}`);
-}
-app.listen(port, startServer);
+export default app;
